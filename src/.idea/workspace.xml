@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21cfc366-e73b-4ab7-9ff3-0f9e94971c27" name="Changes" comment="" />
+    <list default="true" id="21cfc366-e73b-4ab7-9ff3-0f9e94971c27" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/AdminHomePage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/AdminHomePage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/AdminHomePage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/AdminHomePage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/AdminHomePage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/AdminHomePage$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/AdminHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/AdminHomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/EmployeeManagementScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/EmployeeManagementScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/EmployeeManagementScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/EmployeeManagementScreen$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/EmployeeManagementScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/EmployeeManagementScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/EmployeeSearchScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/EmployeeSearchScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/EmployeeSearchScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/EmployeeSearchScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/First$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/First$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/First$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/First$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/First.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/First.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/InventoryManagementPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/InventoryManagementPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/InventoryManagementPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/InventoryManagementPage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/InventoryManagementPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/InventoryManagementPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/addEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/addEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/addInventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/addInventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/setAttendance$Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/javaSwing/setAttendance.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/javaSwing/setAttendance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSwing/AdminHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSwing/AdminHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSwing/EmployeeManagementScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSwing/EmployeeManagementScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSwing/EmployeeSearchScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSwing/EmployeeSearchScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSwing/First.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSwing/First.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSwing/InventoryManagementPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSwing/InventoryManagementPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSwing/addEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSwing/addEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSwing/addInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSwing/addInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSwing/setAttendance.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSwing/setAttendance.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2eTzSWfjDOwLH9N9i9CDxAwIgy3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,7 +52,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/New folder/javaSwing/src"
+    "last_opened_file_path": "C:/Users/Dell/Desktop/Server.java"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

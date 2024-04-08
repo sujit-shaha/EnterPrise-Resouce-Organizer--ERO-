@@ -5,18 +5,18 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.HashMap;
-import java.util.Map;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class InventorySearchPage extends JFrame {
 
     private JTextField searchField;
     private JPanel cardsPanel;
-    private Map<String, String[]> dummyInventoryData;
 
     public InventorySearchPage() {
         setTitle("Inventory Search");
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 400);
         setLocationRelativeTo(null);
 
@@ -32,8 +32,8 @@ public class InventorySearchPage extends JFrame {
 
         getContentPane().add(mainPanel);
 
-        initializeDummyInventoryData();
-        searchInventory("");
+        // Fetch and display inventory from database
+        fetchAndDisplayInventory("");
 
         setVisible(true);
     }
@@ -46,42 +46,69 @@ public class InventorySearchPage extends JFrame {
         searchField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                searchInventory(searchField.getText());
+                fetchAndDisplayInventory(searchField.getText());
             }
         });
         searchPanel.add(searchField, BorderLayout.CENTER);
         return searchPanel;
     }
 
-    private void initializeDummyInventoryData() {
-        dummyInventoryData = new HashMap<>();
-        dummyInventoryData.put("001", new String[]{"Laptop", "$1000", "10"});
-        dummyInventoryData.put("002", new String[]{"Printer", "$300", "5"});
-        dummyInventoryData.put("003", new String[]{"Desk Chair", "$150", "8"});
-        dummyInventoryData.put("004", new String[]{"Monitor", "$200", "12"});
-        dummyInventoryData.put("005", new String[]{"Keyboard", "$50", "15"});
-    }
-
-    private void searchInventory(String keyword) {
+    private void fetchAndDisplayInventory(String keyword) {
         cardsPanel.removeAll();
-        for (Map.Entry<String, String[]> entry : dummyInventoryData.entrySet()) {
-            String[] itemData = entry.getValue();
-            if (matchesSearch(itemData, keyword)) {
-                JPanel cardPanel = createCardPanel(itemData);
-                cardsPanel.add(cardPanel);
-            }
+
+        // Fetch data from database based on keyword
+        List<String[]> inventoryData = fetchDataFromDatabase(keyword);
+
+        // Create and add card panels for each product
+        for (String[] itemData : inventoryData) {
+            JPanel cardPanel = createCardPanel(itemData);
+            cardsPanel.add(cardPanel);
         }
+
         cardsPanel.revalidate();
         cardsPanel.repaint();
     }
 
-    private boolean matchesSearch(String[] itemData, String keyword) {
-        for (String info : itemData) {
-            if (info.toLowerCase().contains(keyword.toLowerCase())) {
-                return true;
+    private List<String[]> fetchDataFromDatabase(String keyword) {
+        List<String[]> inventoryData = new ArrayList<>();
+
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+
+        try {
+            // Establish connection to your Oracle database
+            String url = "jdbc:oracle:thin:@localhost:1521:xe";
+            String username = "system";
+            String password = "Sujit123";
+            connection = DriverManager.getConnection(url, username, password);
+
+            String query = "SELECT * FROM Product WHERE LOWER(product_name) LIKE ?";
+            statement = connection.prepareStatement(query);
+            statement.setString(1, "%" + keyword.toLowerCase() + "%");
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                String productName = resultSet.getString("product_name");
+                double price = resultSet.getDouble("price");
+                int quantity = resultSet.getInt("quantity");
+
+                inventoryData.add(new String[]{productName, String.valueOf(price), String.valueOf(quantity)});
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            try {
+                if (resultSet != null) resultSet.close();
+                if (statement != null) statement.close();
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
-        return false;
+
+        return inventoryData;
     }
 
     private JPanel createCardPanel(String[] itemData) {
@@ -89,7 +116,7 @@ public class InventorySearchPage extends JFrame {
         cardPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         JLabel nameLabel = new JLabel("Name: " + itemData[0]);
-        JLabel priceLabel = new JLabel("Price: " + itemData[1]);
+        JLabel priceLabel = new JLabel("Price: $" + itemData[1]);
         JLabel quantityLabel = new JLabel("Quantity Available: " + itemData[2]);
 
         nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
